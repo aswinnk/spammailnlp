@@ -42,17 +42,6 @@
 				<span class="contact100-form-title">
 					Drop Us A Message
 				</span>
-
-				{% comment %} <div class="wrap-input100 rs1 validate-input" data-validate = "Name is required">
-					<input class="input100" type="text" name="name" placeholder="Name">
-					<span class="focus-input100"></span>
-				</div>
-
-				<div class="wrap-input100 rs1 validate-input" data-validate = "Email is required: e@a.z">
-					<input class="input100" type="text" name="email" placeholder="Email Address">
-					<span class="focus-input100"></span>
-				</div> {% endcomment %}
-
 				<div class="wrap-input100 validate-input" data-validate = "Message is required">
 					<textarea class="input100" name="message" placeholder="Write Us A Message"></textarea>
 					<span class="focus-input100"></span>
@@ -63,6 +52,13 @@
 						<input type="submit" value="check" name="submit">
 					</button>
 				</div>
+				<div class="results">
+					{% if prediction == 1%}
+						<h2 style="color:red;">Looking Spam⚠️, Be safe</h2>
+					{% elif prediction == 0%}
+						<h2 style="color:green;"><b>Not a Spam💚</b></h2>
+					{% endif %}
+	</div>
 			</form>
 		</div>
 	</div>
